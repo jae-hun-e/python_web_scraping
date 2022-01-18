@@ -1,6 +1,7 @@
-import requests
-from bs4 import BeautifulSoup
 from indeed import get_indeed_jobs
+from stack_over_flow import get_stackOverFlow_jobs
 
+indeed_jobs = get_indeed_jobs()
+stack_over_flow_jobs = get_stackOverFlow_jobs()
 
-get_indeed_jobs(10)
+print(indeed_jobs, stack_over_flow_jobs)
