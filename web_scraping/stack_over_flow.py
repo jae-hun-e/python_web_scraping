@@ -15,7 +15,7 @@ def get_last_page():
 
 def get_jobs_info(job):
     url_number = job['data-jobid']
-    title = job.find('a').get_text()
+    title = job.find('a', {'class': 's-link'}).get_text(strip=True)
     location = []
     company, location = job.find('h3').find_all(
         'span', recursive=False)
